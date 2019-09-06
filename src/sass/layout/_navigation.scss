@@ -1,0 +1,225 @@
+.navigation{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:5.1rem 6.7rem;
+    z-index:100;
+    transition: all .4s;
+
+    .nav-icon{
+        margin: 1rem;
+        width: 30px;
+        cursor:pointer;
+        display:none;
+        @include respond(phone){
+            display:block;
+        }
+    }
+    .nav-icon:after, 
+    .nav-icon:before, 
+    .nav-icon div {
+        background-color: #fff;
+        border-radius: 3px;
+        content: '';
+        display: block;
+        height: 2px;
+        margin: 7px 0;
+        transition: all .2s ease-in-out;
+    }
+    
+    .nav-logo{
+        font-family: 'Dancing Script', cursive;
+        font-size:2.8rem;
+        font-weight: 700;
+        transition: all .2s;
+        a{
+            text-decoration: none;
+            transition: all .2s;
+            &:visited, &:link{
+                color:#D9F0FF;
+                transition:all .2s;
+            }
+            &:hover{
+                color:white;
+            }
+        }
+    }
+    .nav{
+        &__list{
+            display:flex;
+            align-items: center;
+            list-style-type: none;
+            transition: all .2s;
+            &__item{
+                &:not(:last-child){
+                    margin-right:3.1rem;
+                }
+                a{
+                    &:link, &:visited{
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                        letter-spacing: 2px;
+                        color: #D9F0FF;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        transition: all .2s;
+                    }
+                    &:hover{
+                        color:white;
+                    }
+                }
+            }
+        }
+    }
+    &.navigation-scrolled{
+        background-color: white;
+        padding:1rem 6.7rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,.2); 
+        transition: all .4s;
+        .nav-logo{
+            a{
+                &:visited, &:link{
+                    color:#325DFF;
+                }
+                &:hover{
+                    color:darken(#325DFF, 30%);
+                }
+            }
+        }
+        .nav{
+            &__list{
+                &__item{
+                    a{
+                        &:link, &:visited{
+                            color:#325DFF;
+                        }
+                        &:hover{
+                            color:darken(#325DFF, 30%);
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+    @include respond(phone){
+        height:60px;
+        padding:.5rem 4rem;
+        flex-direction: column;
+        align-items: center;
+        transition:all .2s;
+        overflow:hidden;
+        transition: all .4s;
+        
+        .mobile-nav{
+            display:flex;
+            justify-content: space-between;
+            align-self:flex-start;
+            justify-self: center;
+            width:100%;
+            
+        }
+        .nav{
+            margin-top:1rem;
+            
+            &__list{
+                flex-direction: column;
+                &__item{
+                    margin-right:0 !important;
+                    margin-bottom:.8rem;
+                }
+            }
+        }
+        &.navigation-scrolled{
+            background-color: white;
+            height:60px;
+            padding:.5rem 4rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,.2); 
+            
+            
+            .nav-icon:after, 
+            .nav-icon:before, 
+            .nav-icon div {
+                background-color:#325DFF;
+            }
+            .nav-logo{
+                a{
+                    &:visited, &:link{
+                        color:#325DFF;
+                    }
+                    &:hover{
+                        color:darken(#325DFF, 30%);
+                    }
+                }
+            }
+            .nav{
+                &__list{
+                    &__item{
+                        a{
+                            &:link, &:visited{
+                                color:#325DFF;
+                            }
+                            &:hover{
+                                color:darken(#325DFF, 30%);
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        &.open{
+            background-color: white;
+            height:auto;
+            padding-bottom:1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,.2); 
+            .nav-icon:after, 
+            .nav-icon:before, 
+            .nav-icon div {
+                background-color:#325DFF;
+            }
+            .nav-icon:before {
+                transform: translateY(9px) rotate(135deg);
+            }
+            
+            .nav-icon:after {
+                transform: translateY(-9px) rotate(-135deg);
+            }
+            
+            .nav-icon div {
+                transform: scale(0);
+            }
+            .nav-logo{
+                a{
+                    &:visited, &:link{
+                        color:#325DFF;
+                    }
+                    &:hover{
+                        color:darken(#325DFF, 30%);
+                    }
+                }
+            }
+            .nav{
+                &__list{
+                    &__item{
+                        a{
+                            &:link, &:visited{
+                                color:#325DFF;
+                            }
+                            &:hover{
+                                color:darken(#325DFF, 30%);
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
+        }
+    }
+}

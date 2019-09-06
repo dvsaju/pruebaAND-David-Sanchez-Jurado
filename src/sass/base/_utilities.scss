@@ -1,0 +1,10 @@
+.btn--purple{
+    background-color:#325DFF;
+    
+    &:hover{
+        background-color: lighten(#325DFF, 5%);
+    }
+}
+.flex--center{
+    align-self:center;
+}

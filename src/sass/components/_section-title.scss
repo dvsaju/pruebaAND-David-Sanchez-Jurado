@@ -1,0 +1,29 @@
+.section-title{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:7.6rem 25rem;
+    @include respond(phone){
+        padding:6rem 5rem;
+    }
+    @include respond(tab-port){
+        padding: 7.6rem 13rem;
+    }
+    &__title{
+        font-size:3.5rem;
+        line-height:4.2rem;
+        margin-bottom:2.7rem;
+        text-align:center;
+    }
+    &__description{
+        font-size:1.6rem;
+        letter-spacing: 1px;
+        line-height:2.5rem;
+        opacity:.65;
+        text-align:center;
+        font-weight: 400;
+    }
+        
+    
+}

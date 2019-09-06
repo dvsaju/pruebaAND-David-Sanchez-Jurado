@@ -1,0 +1,38 @@
+.case{
+    background-image: linear-gradient(rgba(21,116,185,.22), rgba(21,116,185,.22)), url('img/Image.png');
+    background-size: cover;
+    padding:21.5rem 25.4rem 13.2rem 25.4rem;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    @include respond(phone){
+        padding:8rem 5rem 7rem;
+    }
+    @include respond(tab-port){
+        padding:8rem 5rem 7rem;    
+    }
+    &__icon{
+        width:4.4rem;
+        margin-bottom:6.8rem;
+        @include respond(phone){
+            margin-bottom:3rem;
+        }
+    }
+    &__title{
+        font-size:3.5rem;
+        color:white;
+        line-height:4.2rem;
+        margin-bottom:2.2rem;
+        text-align:center;
+    }
+    &__description{
+        text-align:center;
+        color:white;
+        letter-spacing: 1px;
+        font-family: 'Poppins', sans-serif;
+        font-weight:400;
+        line-height:2.5rem;
+        font-size:1.6rem;
+    }
+}
